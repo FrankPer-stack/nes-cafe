@@ -116,9 +116,9 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 📞 Contacto
 
-Francisco - [@tutwitter](https://twitter.com/tutwitter) - fr4nkPeralt@outlook.com
+Francisco - [@user_peral] - fr4nkPeralt@outlook.com
 
-Link del proyecto: [https://github.com/TuUsuario/Nes-Cafe](https://github.com/TuUsuario/Nes-Cafe)
+Link del proyecto: [https://github.com/FrankPer-stack/](https://github.com/FrankPer-stack/)
 
 ---
-⌨️ con ❤️ por [Francisco](https://github.com/TuUsuario)
+⌨️ con ❤️ por [Francisco](https://github.com/FrankPer-stack/)
