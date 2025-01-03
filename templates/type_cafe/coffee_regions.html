@@ -1,0 +1,149 @@
+
+{% load static %}
+
+<!-- Por Región de Origen Section -->
+<section class="py-16 bg-[#F5EDE6]">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-[#2C1810] mb-12">Por Región de Origen</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Colombia -->
+            <div class="bg-white rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                    onclick="openModal('colombia-modal')">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                        alt="Café Colombiano" 
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Colombiano</h3>
+                <p class="text-gray-600">Huila, Nariño</p>
+            </div>
+
+            <!-- Guatemala -->
+            <div class="bg-white rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                    onclick="openModal('guatemala-modal')">
+                <img src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                        alt="Café Guatemalteco" 
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Guatemalteco</h3>
+                <p class="text-gray-600">Antigua</p>
+            </div>
+
+            <!-- Brasil -->
+            <div class="bg-white rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                    onclick="openModal('brasil-modal')">
+                <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                        alt="Café Brasileño" 
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Brasileño</h3>
+                <p class="text-gray-600">Sabores a nuez y chocolate</p>
+            </div>
+
+            <!-- Costa Rica -->
+            <div class="bg-white rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                    onclick="openModal('costarica-modal')">
+                <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                        alt="Café de Costa Rica" 
+                        class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café de Costa Rica</h3>
+                <p class="text-gray-600">Tarrazú</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modales -->
+<!-- Modal Colombia -->
+<div id="colombia-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('colombia-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Colombiano</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">Nuestro café colombiano proviene de las prestigiosas regiones de Huila y Nariño, reconocidas mundialmente por la calidad excepcional de sus granos.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Intenso y fragante</li>
+                    <li>Sabor: Notas cítricas y caramelizadas</li>
+                    <li>Cuerpo: Medio a completo</li>
+                    <li>Acidez: Brillante y balanceada</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Guatemala -->
+<div id="guatemala-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('guatemala-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Guatemalteco</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">Proveniente de la región de Antigua, nuestro café guatemalteco es cultivado en suelos volcánicos a gran altura.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Floral y especiado</li>
+                    <li>Sabor: Chocolate con notas de especias</li>
+                    <li>Cuerpo: Completo y sedoso</li>
+                    <li>Acidez: Media con toque dulce</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Brasil -->
+<div id="brasil-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('brasil-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Brasileño</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">Nuestro café brasileño destaca por sus distintivos sabores a nuez y chocolate, resultado de su cultivo en las ricas tierras de Brasil.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Dulce y achocolatado</li>
+                    <li>Sabor: Nueces y chocolate negro</li>
+                    <li>Cuerpo: Suave y equilibrado</li>
+                    <li>Acidez: Baja y suave</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Costa Rica -->
+<div id="costarica-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('costarica-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café de Costa Rica</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">El café de la región de Tarrazú es reconocido por su calidad superior y su perfil de sabor único.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Frutal y floral</li>
+                    <li>Sabor: Notas de miel y cítricos</li>
+                    <li>Cuerpo: Medio y elegante</li>
+                    <li>Acidez: Brillante y vibrante</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/modals.js' %}"></script>

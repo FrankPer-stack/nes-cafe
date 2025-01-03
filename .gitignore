@@ -1,0 +1,113 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Virtual Environment
+env/
+venv/
+ENV/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Node y Tailwind
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de respaldo
+*.bak
+*.tmp
+*.temp
+
+# Archivos de caché
+*.cache
+.sass-cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Archivos de configuración local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Archivos de base de datos
+*.sql
+*.sqlite
+*.sqlite3
+*.psql
+
+# Archivos de registro y monitoreo
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de seguridad
+*.pem
+*.key
+*.cert
+*.crt
+
+# Archivos de compilación
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Directorios de documentación generada
+docs/_build/
+site/
+
+# Archivos temporales
+*.swp
+*.swo
+*~
+.~*
+
+# Archivos de migración de Django (opcional, comenta si quieres versionar las migraciones)
+# */migrations/*.py
+# !*/migrations/__init__.py

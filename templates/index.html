@@ -1,0 +1,108 @@
+{% extends "./layouts/base.html" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <div class="relative bg-cover bg-center h-[500px] w-[100vw] -ml-[calc((100vw-100%)/2)] overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2400&q=80'); background-attachment: fixed;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="text-white">
+                <h1 class="text-5xl font-bold mb-4">Descubre el Arte del Café</h1>
+                <p class="text-xl mb-8">Experimenta el sabor único de nuestro café premium</p>
+                <a href="#productos" class="bg-[#BA8558] hover:bg-[#A67346] text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Ver Productos
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section id="productos" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nuestros Productos Destacados</h2>
+            <p class="text-lg text-gray-600 text-center mb-8 italic font-light">Descubre nuestras mejores variedades de café, seleccionadas para ti.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1587080413959-06b859fb107d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Café Premium" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Café Premium</h3>
+                        <p class="text-gray-600 mb-4">Nuestro blend especial de granos selectos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#BA8558]">$12.99</span>
+                            <button class="bg-[#BA8558] hover:bg-[#A67346] text-white px-4 py-2 rounded-full">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Café Orgánico" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Café Orgánico</h3>
+                        <p class="text-gray-600 mb-4">100% orgánico y comercio justo</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#BA8558]">$14.99</span>
+                            <button class="bg-[#BA8558] hover:bg-[#A67346] text-white px-4 py-2 rounded-full">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Café Especial" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Café Especial</h3>
+                        <p class="text-gray-600 mb-4">Edición limitada de temporada</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#BA8558]">$16.99</span>
+                            <button class="bg-[#BA8558] hover:bg-[#A67346] text-white px-4 py-2 rounded-full">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-white rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#BA8558]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Envío Rápido</h3>
+                    <p class="text-gray-600">Entrega en 24-48 horas</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-white rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#BA8558]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Calidad Garantizada</h3>
+                    <p class="text-gray-600">Los mejores granos seleccionados</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-white rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#BA8558]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Compra Segura</h3>
+                    <p class="text-gray-600">100% satisfacción garantizada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

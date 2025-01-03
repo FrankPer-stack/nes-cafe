@@ -1,0 +1,68 @@
+# Ignorar archivos de control de versiones
+.git
+.gitignore
+.github
+
+# Ignorar archivos de documentación
+README.md
+CONTRIBUTING.md
+CHANGELOG.md
+
+# Ignorar entornos virtuales de Python
+venv/
+env/
+.env
+*.env
+
+# Ignorar caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar archivos de compilación
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignorar dependencias de desarrollo
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignorar archivos de desarrollo de frontend
+theme/static_src/node_modules/
+theme/static_src/dist/
+
+# Ignorar archivos de base de datos locales
+*.sqlite3
+*.db
+
+# Ignorar logs
+*.log
+
+# Ignorar archivos de configuración de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de configuración local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignorar directorios de archivos estáticos y media locales
+staticfiles/
+media/
+
+# Ignorar archivos de pruebas
+.pytest_cache/
+htmlcov/
+.coverage

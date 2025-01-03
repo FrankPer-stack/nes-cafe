@@ -1,0 +1,66 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-100 py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 bg-white border-b border-gray-200">
+                <div class="flex items-center space-x-4">
+                    {% if user.profile_picture %}
+                        <img src="{{ user.profile_picture.url }}" alt="Profile picture" class="h-24 w-24 rounded-full">
+                    {% else %}
+                        <div class="h-24 w-24 rounded-full bg-gray-200 flex items-center justify-center">
+                            <span class="text-2xl text-gray-500">{{ user.username|first|upper }}</span>
+                        </div>
+                    {% endif %}
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">{{ user.username }}</h2>
+                        <p class="text-gray-500">{{ user.email }}</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Información Personal</h3>
+                        <dl class="mt-2 space-y-2">
+                            <div>
+                                <dt class="text-sm font-medium text-gray-500">Teléfono</dt>
+                                <dd class="text-sm text-gray-900">{{ user.phone_number|default:"No especificado" }}</dd>
+                            </div>
+                            <div>
+                                <dt class="text-sm font-medium text-gray-500">Dirección</dt>
+                                <dd class="text-sm text-gray-900">{{ user.address|default:"No especificada" }}</dd>
+                            </div>
+                            <div>
+                                <dt class="text-sm font-medium text-gray-500">Fecha de nacimiento</dt>
+                                <dd class="text-sm text-gray-900">{{ user.date_of_birth|date:"d/m/Y"|default:"No especificada" }}</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Preferencias de Café</h3>
+                        <dl class="mt-2 space-y-2">
+                            <div>
+                                <dt class="text-sm font-medium text-gray-500">Café favorito</dt>
+                                <dd class="text-sm text-gray-900">{{ user.favorite_coffee|default:"No especificado" }}</dd>
+                            </div>
+                            <div>
+                                <dt class="text-sm font-medium text-gray-500">Preferencias</dt>
+                                <dd class="text-sm text-gray-900">{{ user.coffee_preferences|default:"No especificadas" }}</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brown-600 hover:bg-brown-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brown-500">
+                        Editar perfil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

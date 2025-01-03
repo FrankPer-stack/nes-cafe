@@ -1,0 +1,180 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-bold mb-6 text-red-800 border-b pb-2">By Presentation</h2>
+        
+        <div class="space-y-6">
+            <!-- Café en Grano Entero -->
+            <div class="coffee-type" onclick="openModal('granoEntero')">
+                <div class="bg-gradient-to-r from-red-700 to-red-800 text-white p-4 rounded-lg cursor-pointer hover:from-red-800 hover:to-red-900 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Café en Grano Entero</h3>
+                    <p class="text-gray-100">Para clientes que prefieren molerlo en casa.</p>
+                </div>
+            </div>
+
+            <!-- Café Molido -->
+            <div class="coffee-type" onclick="openModal('molido')">
+                <div class="bg-gradient-to-r from-red-700 to-red-800 text-white p-4 rounded-lg cursor-pointer hover:from-red-800 hover:to-red-900 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Café Molido</h3>
+                    <p class="text-gray-100">Ideal para quienes buscan comodidad.</p>
+                </div>
+            </div>
+
+            <!-- Café en Cápsulas -->
+            <div class="coffee-type" onclick="openModal('capsulas')">
+                <div class="bg-gradient-to-r from-red-700 to-red-800 text-white p-4 rounded-lg cursor-pointer hover:from-red-800 hover:to-red-900 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Café en Cápsulas</h3>
+                    <p class="text-gray-100">Compatible con máquinas de café populares (Nespresso, Dolce Gusto).</p>
+                </div>
+            </div>
+
+            <!-- Café Cold Brew -->
+            <div class="coffee-type" onclick="openModal('coldBrew')">
+                <div class="bg-gradient-to-r from-red-700 to-red-800 text-white p-4 rounded-lg cursor-pointer hover:from-red-800 hover:to-red-900 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Café Cold Brew</h3>
+                    <p class="text-gray-100">Café preparado en frío, ideal para temporadas calurosas.</p>
+                </div>
+            </div>
+
+            <!-- Café Descafeinado -->
+            <div class="coffee-type" onclick="openModal('descafeinado')">
+                <div class="bg-gradient-to-r from-red-700 to-red-800 text-white p-4 rounded-lg cursor-pointer hover:from-red-800 hover:to-red-900 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Café Descafeinado</h3>
+                    <p class="text-gray-100">Para clientes que desean disfrutar del sabor sin cafeína.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modales para cada tipo de café -->
+<div id="granoEntero" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">Café en Grano Entero</h3>
+            <div class="mt-2">
+                <img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=400" 
+                     alt="Café en Grano Entero" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+            </div>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500">
+                    Para los verdaderos amantes del café que aprecian el proceso completo de preparación. 
+                    Nuestros granos enteros conservan todos sus aceites esenciales y aromas, 
+                    permitiéndote moler el café justo antes de prepararlo para obtener la máxima frescura y sabor.
+                </p>
+            </div>
+            <div class="items-center px-4 py-3">
+                <button onclick="closeModal('granoEntero')" class="px-4 py-2 bg-red-700 text-white text-base font-medium rounded-md shadow-sm hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-700">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="molido" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">Café Molido</h3>
+            <div class="mt-2">
+                <img src="https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&w=400" 
+                     alt="Café Molido" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+            </div>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500">
+                    La opción perfecta para disfrutar de un café de calidad sin complicaciones. 
+                    Nuestro café molido está preparado en el punto exacto para diferentes métodos de preparación, 
+                    desde cafeteras tradicionales hasta prensas francesas.
+                </p>
+            </div>
+            <div class="items-center px-4 py-3">
+                <button onclick="closeModal('molido')" class="px-4 py-2 bg-red-700 text-white text-base font-medium rounded-md shadow-sm hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-700">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="capsulas" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">Café en Cápsulas</h3>
+            <div class="mt-2">
+                <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400" 
+                     alt="Café en Cápsulas" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+            </div>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500">
+                    La solución moderna para los amantes del café. Nuestras cápsulas son compatibles 
+                    con las máquinas más populares del mercado, ofreciendo una experiencia de café 
+                    perfectamente medida y preparada en segundos.
+                </p>
+            </div>
+            <div class="items-center px-4 py-3">
+                <button onclick="closeModal('capsulas')" class="px-4 py-2 bg-red-700 text-white text-base font-medium rounded-md shadow-sm hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-700">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="coldBrew" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">Café Cold Brew</h3>
+            <div class="mt-2">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=400" 
+                     alt="Café Cold Brew" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+            </div>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500">
+                    Una experiencia refrescante de café. Nuestro Cold Brew se prepara mediante 
+                    un proceso de infusión en frío durante 12-24 horas, resultando en una bebida 
+                    suave, menos ácida y naturalmente dulce, perfecta para los días calurosos.
+                </p>
+            </div>
+            <div class="items-center px-4 py-3">
+                <button onclick="closeModal('coldBrew')" class="px-4 py-2 bg-red-700 text-white text-base font-medium rounded-md shadow-sm hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-700">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="descafeinado" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">Café Descafeinado</h3>
+            <div class="mt-2">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400" 
+                     alt="Café Descafeinado" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+            </div>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500">
+                    Todo el sabor sin la cafeína. Nuestro proceso de descafeinización mantiene 
+                    el sabor rico y complejo del café mientras elimina la cafeína, permitiéndote 
+                    disfrutar de tu bebida favorita en cualquier momento del día.
+                </p>
+            </div>
+            <div class="items-center px-4 py-3">
+                <button onclick="closeModal('descafeinado')" class="px-4 py-2 bg-red-700 text-white text-base font-medium rounded-md shadow-sm hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-700">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/modals.js' %}"></script>
+
+{% endblock %}

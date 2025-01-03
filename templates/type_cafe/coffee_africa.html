@@ -1,0 +1,80 @@
+{% load static %}
+
+<!-- Café de África Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-[#2C1810] mb-12">Café de África</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Etiopía Yirgacheffe -->
+            <div class="bg-[#F5EDE6] rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                 onclick="openModal('yirgacheffe-modal')">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                     alt="Café Etiopía Yirgacheffe" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Etiopía Yirgacheffe</h3>
+                <p class="text-gray-600">Notas cítricas y florales</p>
+            </div>
+
+            <!-- Etiopía Sidamo -->
+            <div class="bg-[#F5EDE6] rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                 onclick="openModal('sidamo-modal')">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                     alt="Café Etiopía Sidamo" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Etiopía Sidamo</h3>
+                <p class="text-gray-600">Dulce y afrutado</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modales -->
+<!-- Modal Yirgacheffe -->
+<div id="yirgacheffe-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('yirgacheffe-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Etiopía Yirgacheffe</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">El café Yirgacheffe es considerado uno de los mejores cafés de Etiopía, conocido por sus distintivas notas cítricas y florales.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Floral con notas de jazmín</li>
+                    <li>Sabor: Cítrico con toques de bergamota y limón</li>
+                    <li>Cuerpo: Ligero y delicado</li>
+                    <li>Acidez: Brillante y refrescante</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Sidamo -->
+<div id="sidamo-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('sidamo-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Etiopía Sidamo</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">El café Sidamo, procedente de la región del mismo nombre en Etiopía, es reconocido por su perfil dulce y afrutado que lo hace único.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Dulce con notas de bayas</li>
+                    <li>Sabor: Frutas rojas y caramelo</li>
+                    <li>Cuerpo: Medio y sedoso</li>
+                    <li>Acidez: Media con toque frutal</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/modals.js' %}"></script>

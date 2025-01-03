@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}" />
+    {% block styles %} {% endblock styles %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body class="min-h-screen bg-gray-100">
+    <!-- Your existing content goes here -->
+    {% include "layouts/partials/nav.html" %}
+
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}
+        {% endblock %}   
+    </main>
+
+    {% include "layouts/partials/footer.html" %}
+    {% block scripts %}{% endblock %}
+    <script src="{% static 'js/modals.js' %}"></script>
+  </body>
+</html>

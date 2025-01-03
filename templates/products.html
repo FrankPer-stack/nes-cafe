@@ -1,0 +1,20 @@
+{% extends "./layouts/base.html" %}
+{% load static %}
+
+{% block title %} Productos {% endblock  %}
+
+{% block content %}
+    <!-- Header Section -->
+    <div class="bg-[#2C1810] text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-4">Nuestros Productos</h1>
+            <p class="text-xl text-center text-gray-300">Descubre nuestra selección premium de cafés</p>
+        </div>
+    </div>
+
+    {% include "./type_cafe/coffee_types.html" %}
+    {% include "./type_cafe/coffee_regions.html" %}
+    {% include "./type_cafe/coffee_africa.html" %}
+    {% include "./type_cafe/coffee_asia_oceania.html" %}
+    {% include "./type_cafe/coffee_exclusive.html" %}
+{% endblock %}

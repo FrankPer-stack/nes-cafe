@@ -1,0 +1,114 @@
+{% load static %}
+
+<!-- Café de Asia y Oceanía Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-[#2C1810] mb-12">Café de Asia y Oceanía</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Café Sumatra -->
+            <div class="bg-[#F5EDE6] rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                 onclick="openModal('sumatra-modal')">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                     alt="Café Sumatra" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Sumatra</h3>
+                <p class="text-gray-600">Notas terrosas y cuerpo intenso</p>
+            </div>
+
+            <!-- Café Kona -->
+            <div class="bg-[#F5EDE6] rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                 onclick="openModal('kona-modal')">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                     alt="Café Kona" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Kona</h3>
+                <p class="text-gray-600">Suave, con matices a nuez y frutas</p>
+            </div>
+
+            <!-- Café Monsoon Malabar -->
+            <div class="bg-[#F5EDE6] rounded-lg p-6 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+                 onclick="openModal('malabar-modal')">
+                <img src="https://images.unsplash.com/photo-1501747315-124a0eaca060?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                     alt="Café Monsoon Malabar" 
+                     class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-[#2C1810] mb-2">Café Monsoon Malabar</h3>
+                <p class="text-gray-600">Granos envejecidos con humedad marina</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modales -->
+<!-- Modal Sumatra -->
+<div id="sumatra-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('sumatra-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Sumatra</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">El café de Sumatra es conocido por su sabor único y terroso, cultivado en las tierras altas de Indonesia.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Terroso y herbáceo</li>
+                    <li>Sabor: Notas a tierra húmeda y especias</li>
+                    <li>Cuerpo: Intenso y cremoso</li>
+                    <li>Acidez: Baja y suave</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Kona -->
+<div id="kona-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('kona-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Kona</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">Cultivado en las laderas volcánicas de Hawái, el café Kona es uno de los más exclusivos del mundo.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Dulce y floral</li>
+                    <li>Sabor: Notas a nuez y frutas tropicales</li>
+                    <li>Cuerpo: Medio y sedoso</li>
+                    <li>Acidez: Media y brillante</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Monsoon Malabar -->
+<div id="malabar-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-8 relative">
+            <button onclick="closeModal('malabar-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h3 class="text-2xl font-bold text-[#2C1810] mb-4">Café Monsoon Malabar</h3>
+            <div class="prose max-w-none">
+                <p class="mb-4">Un café único de la India, procesado mediante exposición controlada a los vientos monzónicos, recreando un método histórico de transporte marítimo.</p>
+                <h4 class="text-lg font-semibold mb-2">Características:</h4>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Aroma: Especiado y complejo</li>
+                    <li>Sabor: Notas a madera, especias y un toque salino</li>
+                    <li>Cuerpo: Pleno y mantecoso</li>
+                    <li>Acidez: Muy baja</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/modals.js' %}"></script>

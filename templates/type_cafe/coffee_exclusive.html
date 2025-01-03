@@ -1,0 +1,145 @@
+{% load static %}
+
+<!-- Ediciones Exclusivas Section -->
+<section class="py-20 bg-gradient-to-b from-[#2C1810] to-[#1a0f0a]">
+    <div class="container mx-auto px-4">
+        <!-- Encabezado VIP -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-[#BA8558] mb-4 relative inline-block">
+                Ediciones Exclusivas
+                <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                    <span class="text-2xl">⭐</span>
+                </div>
+            </h2>
+            <div class="w-32 h-1 bg-gradient-to-r from-[#BA8558] to-[#D4AF37] mx-auto"></div>
+            <p class="text-[#F5EDE6] mt-4 italic">Descubre nuestra selección más refinada</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <!-- Blue Mountain Card -->
+            <div class="group" onclick="openModal('bluemountain-modal')">
+                <div class="bg-gradient-to-br from-[#2C1810] to-[#1a0f0a] rounded-lg p-8 border border-[#BA8558] shadow-2xl hover:shadow-[0_0_25px_rgba(186,133,88,0.3)] transition-all duration-500 cursor-pointer relative overflow-hidden">
+                    <!-- Corona VIP -->
+                    <div class="absolute top-4 right-4">
+                        <span class="text-[#D4AF37] text-2xl">👑</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                         alt="Café Blue Mountain" 
+                         class="w-full h-64 object-cover rounded-lg mb-6 transform group-hover:scale-105 transition-transform duration-500">
+                    <h3 class="text-2xl font-bold text-[#BA8558] mb-3">Café Blue Mountain</h3>
+                    <p class="text-[#F5EDE6] mb-4">Suave y equilibrado, con poca acidez</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#D4AF37] text-sm">Jamaica</span>
+                        <span class="bg-[#BA8558] text-white px-4 py-1 rounded-full text-sm">Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Geisha Card -->
+            <div class="group" onclick="openModal('geisha-modal')">
+                <div class="bg-gradient-to-br from-[#2C1810] to-[#1a0f0a] rounded-lg p-8 border border-[#BA8558] shadow-2xl hover:shadow-[0_0_25px_rgba(186,133,88,0.3)] transition-all duration-500 cursor-pointer relative overflow-hidden">
+                    <!-- Corona VIP -->
+                    <div class="absolute top-4 right-4">
+                        <span class="text-[#D4AF37] text-2xl">👑</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                         alt="Café Geisha" 
+                         class="w-full h-64 object-cover rounded-lg mb-6 transform group-hover:scale-105 transition-transform duration-500">
+                    <h3 class="text-2xl font-bold text-[#BA8558] mb-3">Café Geisha</h3>
+                    <p class="text-[#F5EDE6] mb-4">Floral, frutal y único</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#D4AF37] text-sm">Panamá</span>
+                        <span class="bg-[#BA8558] text-white px-4 py-1 rounded-full text-sm">Premium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modales Exclusivos -->
+<!-- Modal Blue Mountain -->
+<div id="bluemountain-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-gradient-to-br from-[#2C1810] to-[#1a0f0a] rounded-lg max-w-2xl w-full p-8 relative border border-[#BA8558]">
+            <button onclick="closeModal('bluemountain-modal')" class="absolute top-4 right-4 text-[#BA8558] hover:text-[#D4AF37]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="flex items-center mb-6">
+                <h3 class="text-3xl font-bold text-[#BA8558]">Café Blue Mountain</h3>
+                <span class="text-[#D4AF37] text-2xl ml-4">👑</span>
+            </div>
+            <div class="prose max-w-none text-[#F5EDE6]">
+                <p class="mb-6">Considerado uno de los cafés más exclusivos del mundo, el Blue Mountain de Jamaica es cultivado en condiciones perfectas de altitud y clima en las Montañas Azules.</p>
+                <h4 class="text-xl font-semibold mb-4 text-[#BA8558]">Características Premium:</h4>
+                <ul class="list-none space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Aroma: Intensamente floral y dulce</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Sabor: Excepcionalmente suave y limpio</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Cuerpo: Sedoso y equilibrado</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Acidez: Delicada y perfectamente balanceada</span>
+                    </li>
+                </ul>
+                <div class="bg-[#1a0f0a] p-4 rounded-lg border border-[#BA8558]">
+                    <p class="text-sm italic text-[#BA8558]">Cada grano es cuidadosamente seleccionado y certificado por el Coffee Industry Board de Jamaica.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Geisha -->
+<div id="geisha-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="bg-gradient-to-br from-[#2C1810] to-[#1a0f0a] rounded-lg max-w-2xl w-full p-8 relative border border-[#BA8558]">
+            <button onclick="closeModal('geisha-modal')" class="absolute top-4 right-4 text-[#BA8558] hover:text-[#D4AF37]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="flex items-center mb-6">
+                <h3 class="text-3xl font-bold text-[#BA8558]">Café Geisha</h3>
+                <span class="text-[#D4AF37] text-2xl ml-4">👑</span>
+            </div>
+            <div class="prose max-w-none text-[#F5EDE6]">
+                <p class="mb-6">El café Geisha de Panamá es uno de los más codiciados y caros del mundo, conocido por su perfil de sabor extraordinariamente complejo y refinado.</p>
+                <h4 class="text-xl font-semibold mb-4 text-[#BA8558]">Características Premium:</h4>
+                <ul class="list-none space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Aroma: Jazmín, bergamota y flores tropicales</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Sabor: Notas a mandarina, melocotón y miel</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Cuerpo: Delicado y sedoso</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-[#D4AF37] mr-2">✦</span>
+                        <span>Acidez: Brillante y compleja</span>
+                    </li>
+                </ul>
+                <div class="bg-[#1a0f0a] p-4 rounded-lg border border-[#BA8558]">
+                    <p class="text-sm italic text-[#BA8558]">Cultivado en las alturas de Boquete, Panamá, este café excepcional ha batido récords en subastas internacionales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/modals.js' %}"></script>

@@ -1,0 +1,100 @@
+# Versión de Docker Compose para compatibilidad de características
+
+services:
+  # Servicio de la aplicación web Django
+  web:
+    # Construye la imagen usando el Dockerfile en el directorio actual
+    build: .
+    
+    # Comando personalizado para inicializar la aplicación
+    # Puede sobrescribir el CMD del Dockerfile si es necesario
+    command: sh -c "python manage.py migrate && python manage.py tailwind build && python manage.py runserver 0.0.0.0:8000"
+    
+    # Monta el código fuente como un volumen para desarrollo local
+    # Permite ver cambios en tiempo real sin reconstruir la imagen
+    volumes:
+      - .:/app
+    
+    # Mapea los puertos del contenedor al host
+    # Formato: host:contenedor
+    ports:
+      - "8000:8000"
+    
+    # Variables de entorno para configuración de la aplicación
+    # Permite configurar la aplicación sin modificar el código
+    environment:
+      - DEBUG=True           # Habilita modo de depuración
+      
+      # Configuración de Django
+      - DJANGO_SETTINGS_MODULE=config.settings
+      - DB_NAME=nes-cafe     # Nombre de la base de datos
+      - DB_USER=postgres     # Usuario de base de datos
+      - DB_PASSWORD=fr4nk    # Contraseña de base de datos
+      - DB_HOST=db           # Nombre del servicio de base de datos
+      - DB_PORT=5432         # Puerto de PostgreSQL
+      - ALLOWED_HOSTS=localhost,127.0.0.1,web,host.docker.internal      # Hosts permitidos
+      - NPM_BIN_PATH=/usr/bin/npm  # Ruta de npm en el contenedor
+      - DATABASE_URL=postgres://postgres:fr4nk@db:5432/nes-cafe
+      # Añadir variable para forzar la apertura en todos los hosts
+      - DJANGO_RUNSERVER_INTERFACE=localhost
+    
+    # Archivo de variables de entorno
+    env_file:
+      - .env
+    
+    # Asegura que la base de datos esté lista antes de iniciar la web
+    # Previene errores de conexión durante el inicio
+    depends_on:
+      db:
+        condition: service_healthy
+    
+    # Conecta el servicio a la red 'backend'
+    networks:
+      - backend
+    
+    # Agrega host.docker.internal como host adicional
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # Servicio de base de datos PostgreSQL
+  db:
+    # Usa la imagen oficial de PostgreSQL
+    image: postgres:13
+    
+    # Volumen para persistencia de datos de la base de datos
+    # Los datos se mantienen incluso si se elimina el contenedor
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    
+    # Configuración inicial de la base de datos
+    environment:
+      - POSTGRES_DB=nes-cafe     # Base de datos inicial
+      - POSTGRES_USER=postgres   # Usuario administrador
+      - POSTGRES_PASSWORD=fr4nk  # Contraseña del usuario
+    
+    # Mapea el puerto de PostgreSQL
+    # Permite conexiones externas para desarrollo
+    ports:
+      - "5433:5432"
+    
+    # Verificación de salud de la base de datos
+    # Asegura que PostgreSQL esté completamente inicializado
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]  # Comando para verificar estado
+      interval: 5s    # Intervalo entre verificaciones
+      timeout: 5s     # Tiempo máximo de espera
+      retries: 5      # Número de intentos antes de considerar no saludable
+    
+    # Conecta el servicio a la red 'backend'
+    networks:
+      - backend
+
+# Definición de volúmenes para persistencia de datos
+# Permite mantener datos entre ejecuciones de contenedores
+volumes:
+  postgres_data:  # Volumen para datos de PostgreSQL
+
+# Definición de redes para comunicación entre servicios
+networks:
+  backend:  # Red para comunicación entre servicios
+    driver: bridge
