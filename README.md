@@ -118,7 +118,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 Francisco - [@user_peral] - fr4nkPeralt@outlook.com
 
-Link del proyecto: [https://github.com/FrankPer-stack/](https://github.com/FrankPer-stack/)
+Link del proyecto: [https://github.com/FrankPer-stack/](https://github.com/FrankPer-stack/nes-cafe/)
 
 ---
 ⌨️ con ❤️ por [Francisco](https://github.com/FrankPer-stack/)
