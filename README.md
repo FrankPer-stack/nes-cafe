@@ -5,120 +5,121 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Nes-Cafe es una aplicación web moderna desarrollada con Django y Tailwind CSS, diseñada para ofrecer una experiencia de usuario excepcional en la gestión de una cafetería en línea.
+Nes-Cafe is a modern web application developed with Django and Tailwind CSS, designed to deliver an exceptional user experience for managing an online café.
 
-## 🚀 Características
+## 🚀  Features
 
-- 🔐 Sistema de autenticación robusto
-- 🎨 Diseño moderno y responsivo con Tailwind CSS
-- 📱 Interfaz adaptativa para dispositivos móviles
-- 🔄 Gestión de usuarios y perfiles
-- 🛡️ Seguridad integrada de Django
-- 🌐 Soporte multilenguaje
+- 🔐 Robust authentication system
+- 🎨 Modern and responsive design with Tailwind CSS
+- 📱 Mobile-friendly interface
+- 🔄 User and profile management
+- 🛡️ Built-in Django security features
+- 🌐 Multilanguage support
 
-## 📋 Requisitos Previos
 
-Antes de comenzar, asegúrate de tener instalado:
+## 📋 Prerequisites
+
+Before getting started, ensure you have installed:
 
 - Docker
 - Docker Compose
 - Git
 
-## 🛠️ Instalación
+## 🛠️ Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
 git clone https://github.com/tu-usuario/nes-cafe.git
 cd nes-cafe
 ```
 
-2. Configurar variables de entorno:
-- Copia `.env.example` a `.env`
-- Modifica los valores según tu configuración
+2. Configure environment variables:
+- Copy `.env.example` to `.env`
+- Modify the values according to your setup
 
-3. Construir y levantar los contenedores:
+3. Build and start the containers:
 ```bash
 docker-compose up --build
 ```
 
-4. Acceder a la aplicación:
+4. Access the application:
 - Web: http://localhost:8000
-- Base de datos: localhost:5433
+- Database: localhost:5433
 
-## 🎯 Uso
+## 🎯 Usage
 
-1. Accede a `http://localhost:8000` en tu navegador
-2. Regístrate como nuevo usuario o inicia sesión
-3. Explora las diferentes funcionalidades de la aplicación
+1. Open http://localhost:8000 in your browser
+2. Register as a new user or log in
+3. Explore the application's features
 
-## 🔧 Comandos Útiles
+## 🔧 Useful Commands
 
-- Iniciar contenedores: `docker-compose up`
-- Detener contenedores: `docker-compose down`
-- Reconstruir: `docker-compose up --build`
-- Ejecutar migraciones: `docker-compose exec web python manage.py migrate`
+- Start containers: `docker-compose up`
+- Stop containers:  `docker-compose down`
+- Rebuild containers: `docker-compose up --build`
+- Run migrations: `docker-compose exec web python manage.py migrate`
 
-## 🔧 Solución de Problemas
-- Asegúrate de tener Docker y Docker Compose instalados
-- Verifica que los puertos 8000 y 5433 estén disponibles
-- Revisa los logs con `docker-compose logs`
+## 🔧 Troubleshooting
+- Ensure Docker and Docker Compose are installed
+- Verify that ports 8000 and 5433 are available
+- Check logs with `docker-compose logs`
 
-## 🔧 Estructura del Proyecto
+## 🔧 Project Structure
 
 ```
 Nes-Cafe/
-├── apps/                   # Aplicaciones Django
-│   ├── users/             # Gestión de usuarios
+├── apps/                  # Django apps
+│   ├── users/             # User management
 │   └── ...
-├── config/                # Configuración del proyecto
-├── static/                # Archivos estáticos
-├── templates/             # Plantillas HTML
-├── theme/                 # Configuración de Tailwind
-└── manage.py             # Script de gestión de Django
+├── config/                # Project configuration
+├── static/                 # Static files
+├── templates/            # HTML templates
+├── theme/                 # Tailwind configuration
+└── manage.py             # Django management script
 ```
 
 ## 🧪 Testing
 
-Para ejecutar los tests:
+To run tests:
 ```bash
 docker-compose exec web python manage.py test
 ```
 
 ## 🚀 Deployment
 
-Guía básica para despliegue en producción:
+Basic guide for production deployment:
 
-1. Configura las variables de entorno para producción
-2. Recolecta los archivos estáticos
+1. Configure environment variables for production
+2. Collect static files:
 ```bash
 docker-compose exec web python manage.py collectstatic
 ```
-3. Configura tu servidor web (nginx, Apache, etc.)
-4. Configura tu servidor de aplicaciones (gunicorn, uwsgi, etc.)
+3. Set up your web server (nginx, Apache, etc.)
+4. Configure your application server (gunicorn, uwsgi, etc.)
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-1. Fork el proyecto
-2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 Licencia
+## 📝 License
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ✨ Agradecimientos
+## ✨ Acknowledgements
 
-- Django Framework
+= Django Framework
 - Tailwind CSS
-- Todos los contribuidores que han participado en este proyecto
+- All contributors who participated in this
 
-## 📞 Contacto
+## 📞 Contact
 
 Francisco - [@user_peral] - fr4nkPeralt@outlook.com
 
-Link del proyecto: [https://github.com/FrankPer-stack/](https://github.com/FrankPer-stack/nes-cafe/)
+Project link: [https://github.com/FrankPer-stack/](https://github.com/FrankPer-stack/nes-cafe/)
 
 ---
 ⌨️ con ❤️ por [Francisco](https://github.com/FrankPer-stack/)
